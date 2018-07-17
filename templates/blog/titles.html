@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}blog titles{% endblock %}
+{% block content %}
+<div class="row text-center vertical-middle-sm">
+    <h1>我的博客</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <ul>
+            {% for blog in blogs %}
+                <li><a href="{{ blog.id }}">{{ blog.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+<div class="col-xs-6 col-md-4">
+    <h2>广告</h2>
+    <p>跟老七学：www.itdiffer.com</p>
+    <img width="200px" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4160246659,3402333304&fm=27&gp=0.jpg">
+</div>
+{% endblock %}
